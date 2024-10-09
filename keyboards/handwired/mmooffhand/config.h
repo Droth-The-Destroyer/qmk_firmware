@@ -1,0 +1,26 @@
+#pragma once
+
+//SPI Pins
+#define SPI_SCK_PIN GP18
+#define SPI_MOSI_PIN GP19
+#define SPI_MISO_PIN GP16
+
+//TFT Config
+#define TFT_RESET_PIN GP20
+#define TFT_CS_PIN GP17
+#define TFT_DC_PIN GP21
+#define TFT_WIDTH 128
+#define TFT_HEIGHT 160
+#define TFT_ROTATION QP_ROTATION_180
+
+#define QUANTUM_PAINTER_SUPPORTS_NATIVE_COLORS TRUE
+#define QUANTUM_PAINTER_DISPLAY_TIMEOUT 1800000
+
+//Switch Pins defined as DipSwitch
+#define DIP_SWITCH_PINS { GP15, GP28 }
+
+#define RGB_PIN GP14
+
+//Encoder Config
+#define ENCODER_A_PINS { GP26 }
+#define ENCODER_B_PINS { GP27 }
