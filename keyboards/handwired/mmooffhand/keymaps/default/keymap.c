@@ -1,6 +1,7 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -29,13 +30,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-// Runs at the end of each scan loop 
+// Runs at the end of each scan loop
 void housekeeping_task_user(void) {
-    
+
 }
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(KC_VOLU, KC_VOLD) }
+    [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
 };
 
 // https://github.com/qmk/qmk_firmware/pull/19442/files#diff-766bd0ccc0ab634d6a710652ccca386759a701968a9a7ede3c859c3ea8effb2cR40
@@ -44,7 +45,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 // This must match the order of the pins in DIP_SWITCH_PINS
 // The number of switches is currently hardcoded, can't find a suitable macro/define to get that value from...
 const uint16_t PROGMEM dip_switch_map[][2] = {
-    [0] = { QK_BOOT, KC_SPC },
+    [0] = { QK_BOOT, KC_MUTE },
 };
 
 bool dip_switch_update_user(uint8_t index, bool active) {
